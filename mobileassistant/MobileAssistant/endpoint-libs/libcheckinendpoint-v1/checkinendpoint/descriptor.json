@@ -1,13 +1,13 @@
 {
   "files": [
     {
-      "downloadUrl": "/downloads/checkinendpoint/v1/20140804174950/java/1.18.0-rc/codesdk.com-checkinendpoint-v1-20140804174950-java-1.18.0-rc-sources.jar", 
-      "path": "codesdk.com-checkinendpoint-v1-20140804174950-java-1.18.0-rc-sources.jar", 
+      "downloadUrl": "/downloads/checkinendpoint/v1/20140804181815/java/1.18.0-rc/codesdk.com-checkinendpoint-v1-20140804181815-java-1.18.0-rc-sources.jar", 
+      "path": "codesdk.com-checkinendpoint-v1-20140804181815-java-1.18.0-rc-sources.jar", 
       "type": "source", 
-      "timestamp": "2014-08-04 17:49"
+      "timestamp": "2014-08-04 18:18"
     }, 
     {
-      "path": "codesdk.com-checkinendpoint-v1-20140804174950-java-1.18.0-rc.jar.properties", 
+      "path": "codesdk.com-checkinendpoint-v1-20140804181815-java-1.18.0-rc.jar.properties", 
       "type": "android.properties"
     }
   ], 
@@ -675,5 +675,5 @@
   "packagePath": "mobileassistant", 
   "language_version": "1.18.0-rc", 
   "id": "checkinendpoint:v1", 
-  "revision": 20140804174950
+  "revision": 20140804181815
 }
