@@ -1,6 +1,6 @@
 {
  "kind": "discovery#restDescription",
- "etag": "\"MKGA2miAJpVGF7yQTQhsoDXpye8/omiKdlop8nXzzYj4r7g1_e2YNuQ\"",
+ "etag": "\"MKGA2miAJpVGF7yQTQhsoDXpye8/DEvdDEh4yZocPKSEGr5J4_VxUDI\"",
  "discoveryVersion": "v1",
  "id": "deviceinfoendpoint:v1",
  "name": "deviceinfoendpoint",
@@ -14,9 +14,9 @@
   "x32": "http://www.google.com/images/icons/product/search-32.gif"
  },
  "protocol": "rest",
- "baseUrl": "https://myapp.appspot.com/_ah/api/deviceinfoendpoint/v1/",
+ "baseUrl": "https://valid-dragon-662.appspot.com/_ah/api/deviceinfoendpoint/v1/",
  "basePath": "/_ah/api/deviceinfoendpoint/v1/",
- "rootUrl": "https://myapp.appspot.com/_ah/api/",
+ "rootUrl": "https://valid-dragon-662.appspot.com/_ah/api/",
  "servicePath": "deviceinfoendpoint/v1/",
  "batchPath": "batch",
  "parameters": {

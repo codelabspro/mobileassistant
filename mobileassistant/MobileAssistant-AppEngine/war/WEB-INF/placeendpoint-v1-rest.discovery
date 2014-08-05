@@ -1,6 +1,6 @@
 {
  "kind": "discovery#restDescription",
- "etag": "\"MKGA2miAJpVGF7yQTQhsoDXpye8/8PesLDfhaLJNGQWJt5UxMrTy9R8\"",
+ "etag": "\"MKGA2miAJpVGF7yQTQhsoDXpye8/8T4idWKLGj-F7oYOliBbI1L2KQU\"",
  "discoveryVersion": "v1",
  "id": "placeendpoint:v1",
  "name": "placeendpoint",
@@ -14,9 +14,9 @@
   "x32": "http://www.google.com/images/icons/product/search-32.gif"
  },
  "protocol": "rest",
- "baseUrl": "https://myapp.appspot.com/_ah/api/placeendpoint/v1/",
+ "baseUrl": "https://valid-dragon-662.appspot.com/_ah/api/placeendpoint/v1/",
  "basePath": "/_ah/api/placeendpoint/v1/",
- "rootUrl": "https://myapp.appspot.com/_ah/api/",
+ "rootUrl": "https://valid-dragon-662.appspot.com/_ah/api/",
  "servicePath": "placeendpoint/v1/",
  "batchPath": "batch",
  "parameters": {

@@ -1,6 +1,6 @@
 {
  "kind": "discovery#restDescription",
- "etag": "\"MKGA2miAJpVGF7yQTQhsoDXpye8/oPgKpbGGnovjEMK_4D6x0NkWvEU\"",
+ "etag": "\"MKGA2miAJpVGF7yQTQhsoDXpye8/TbkssSTTqTcFupHKnz3cyFuyCWE\"",
  "discoveryVersion": "v1",
  "id": "checkinendpoint:v1",
  "name": "checkinendpoint",
@@ -14,9 +14,9 @@
   "x32": "http://www.google.com/images/icons/product/search-32.gif"
  },
  "protocol": "rest",
- "baseUrl": "https://myapp.appspot.com/_ah/api/checkinendpoint/v1/",
+ "baseUrl": "https://valid-dragon-662.appspot.com/_ah/api/checkinendpoint/v1/",
  "basePath": "/_ah/api/checkinendpoint/v1/",
- "rootUrl": "https://myapp.appspot.com/_ah/api/",
+ "rootUrl": "https://valid-dragon-662.appspot.com/_ah/api/",
  "servicePath": "checkinendpoint/v1/",
  "batchPath": "batch",
  "parameters": {

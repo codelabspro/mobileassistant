@@ -1,0 +1,200 @@
+{
+  "extends" : "thirdParty.api",
+  "abstract" : false,
+  "root" : "https://valid-dragon-662.appspot.com/_ah/api",
+  "name" : "offerendpoint",
+  "version" : "v1",
+  "defaultVersion" : false,
+  "adapter" : {
+    "bns" : "https://valid-dragon-662.appspot.com/_ah/spi",
+    "deadline" : 65.0,
+    "type" : "lily"
+  },
+  "auth" : {
+    "allowCookieAuth" : false
+  },
+  "frontendLimits" : {
+    "unregisteredUserQps" : -1,
+    "unregisteredQps" : -1,
+    "unregisteredDaily" : -1,
+    "rules" : [ ]
+  },
+  "cacheControl" : {
+    "type" : "no-cache",
+    "maxAge" : 0
+  },
+  "ownerDomain" : "codesdk.com",
+  "ownerName" : "codesdk.com",
+  "packagePath" : "mobileassistant",
+  "methods" : {
+    "offerendpoint.insertOffer" : {
+      "path" : "offer",
+      "httpMethod" : "POST",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.codesdk.mobileassistant.OfferEndpoint.insertOffer",
+      "request" : {
+        "body" : "autoTemplate(backendRequest)",
+        "bodyName" : "resource"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "offerendpoint.getOffer" : {
+      "path" : "offer/{id}",
+      "httpMethod" : "GET",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.codesdk.mobileassistant.OfferEndpoint.getOffer",
+      "request" : {
+        "parameters" : {
+          "id" : {
+            "type" : "string",
+            "required" : true
+          }
+        },
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "offerendpoint.removeOffer" : {
+      "path" : "offer/{id}",
+      "httpMethod" : "DELETE",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.codesdk.mobileassistant.OfferEndpoint.removeOffer",
+      "request" : {
+        "parameters" : {
+          "id" : {
+            "type" : "string",
+            "required" : true
+          }
+        },
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "empty"
+      }
+    },
+    "offerendpoint.updateOffer" : {
+      "path" : "offer",
+      "httpMethod" : "PUT",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.codesdk.mobileassistant.OfferEndpoint.updateOffer",
+      "request" : {
+        "body" : "autoTemplate(backendRequest)",
+        "bodyName" : "resource"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "offerendpoint.listOffer" : {
+      "path" : "offer",
+      "httpMethod" : "GET",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.codesdk.mobileassistant.OfferEndpoint.listOffer",
+      "request" : {
+        "parameters" : {
+          "cursor" : {
+            "type" : "string",
+            "required" : false
+          },
+          "limit" : {
+            "type" : "int32",
+            "required" : false
+          }
+        },
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    }
+  },
+  "descriptor" : {
+    "schemas" : {
+      "Offer" : {
+        "id" : "Offer",
+        "type" : "object",
+        "properties" : {
+          "offerId" : {
+            "type" : "string"
+          },
+          "title" : {
+            "type" : "string"
+          },
+          "description" : {
+            "type" : "string"
+          },
+          "imageUrl" : {
+            "type" : "string"
+          },
+          "offerID" : {
+            "type" : "string"
+          }
+        }
+      },
+      "CollectionResponse_Offer" : {
+        "id" : "CollectionResponse_Offer",
+        "type" : "object",
+        "properties" : {
+          "items" : {
+            "type" : "array",
+            "items" : {
+              "$ref" : "Offer"
+            }
+          },
+          "nextPageToken" : {
+            "type" : "string"
+          }
+        }
+      }
+    },
+    "methods" : {
+      "com.codesdk.mobileassistant.OfferEndpoint.insertOffer" : {
+        "request" : {
+          "$ref" : "Offer"
+        },
+        "response" : {
+          "$ref" : "Offer"
+        }
+      },
+      "com.codesdk.mobileassistant.OfferEndpoint.getOffer" : {
+        "response" : {
+          "$ref" : "Offer"
+        }
+      },
+      "com.codesdk.mobileassistant.OfferEndpoint.removeOffer" : {
+      },
+      "com.codesdk.mobileassistant.OfferEndpoint.updateOffer" : {
+        "request" : {
+          "$ref" : "Offer"
+        },
+        "response" : {
+          "$ref" : "Offer"
+        }
+      },
+      "com.codesdk.mobileassistant.OfferEndpoint.listOffer" : {
+        "response" : {
+          "$ref" : "CollectionResponse_Offer"
+        }
+      }
+    }
+  }
+}

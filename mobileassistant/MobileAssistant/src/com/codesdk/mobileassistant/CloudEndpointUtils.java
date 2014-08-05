@@ -31,7 +31,7 @@ public class CloudEndpointUtils {
    * http://developers.google.com/eclipse/docs/cloud_endpoints for more
    * information.
    */
-  protected static final boolean LOCAL_ANDROID_RUN = true;
+  protected static final boolean LOCAL_ANDROID_RUN = false;
 
   /*
    * The root URL of where your DevAppServer is running (if you're running the
@@ -47,7 +47,7 @@ public class CloudEndpointUtils {
    * http://developer.android.com/tools/devices/emulator.html#networkaddresses
    * for more information.
    */
-  protected static final String LOCAL_APP_ENGINE_SERVER_URL_FOR_ANDROID = "http://10.0.2.2:8888";
+  protected static final String LOCAL_APP_ENGINE_SERVER_URL_FOR_ANDROID = "http://192.168.1.2:8888";
 
   /**
    * Updates the Google client builder to connect the appropriate server based

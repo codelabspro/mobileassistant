@@ -1,12 +1,12 @@
 {
   "extends" : "thirdParty.api",
   "abstract" : false,
-  "root" : "https://myapp.appspot.com/_ah/api",
+  "root" : "https://valid-dragon-662.appspot.com/_ah/api",
   "name" : "placeendpoint",
   "version" : "v1",
   "defaultVersion" : false,
   "adapter" : {
-    "bns" : "https://myapp.appspot.com/_ah/spi",
+    "bns" : "https://valid-dragon-662.appspot.com/_ah/spi",
     "deadline" : 65.0,
     "type" : "lily"
   },
@@ -27,27 +27,6 @@
   "ownerName" : "codesdk.com",
   "packagePath" : "mobileassistant",
   "methods" : {
-    "placeendpoint.getPlace" : {
-      "path" : "place/{id}",
-      "httpMethod" : "GET",
-      "authLevel" : "NONE",
-      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
-      "audiences" : [ ],
-      "clientIds" : [ "292824132082.apps.googleusercontent.com" ],
-      "rosyMethod" : "com.codesdk.mobileassistant.PlaceEndpoint.getPlace",
-      "request" : {
-        "parameters" : {
-          "id" : {
-            "type" : "int64",
-            "required" : true
-          }
-        },
-        "body" : "empty"
-      },
-      "response" : {
-        "body" : "autoTemplate(backendResponse)"
-      }
-    },
     "placeendpoint.listPlace" : {
       "path" : "place",
       "httpMethod" : "GET",
@@ -65,6 +44,27 @@
           "limit" : {
             "type" : "int32",
             "required" : false
+          }
+        },
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "placeendpoint.getPlace" : {
+      "path" : "place/{id}",
+      "httpMethod" : "GET",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.codesdk.mobileassistant.PlaceEndpoint.getPlace",
+      "request" : {
+        "parameters" : {
+          "id" : {
+            "type" : "int64",
+            "required" : true
           }
         },
         "body" : "empty"
@@ -129,6 +129,21 @@
   },
   "descriptor" : {
     "schemas" : {
+      "CollectionResponse_Place" : {
+        "id" : "CollectionResponse_Place",
+        "type" : "object",
+        "properties" : {
+          "items" : {
+            "type" : "array",
+            "items" : {
+              "$ref" : "Place"
+            }
+          },
+          "nextPageToken" : {
+            "type" : "string"
+          }
+        }
+      },
       "Place" : {
         "id" : "Place",
         "type" : "object",
@@ -194,32 +209,17 @@
             "format" : "float"
           }
         }
-      },
-      "CollectionResponse_Place" : {
-        "id" : "CollectionResponse_Place",
-        "type" : "object",
-        "properties" : {
-          "items" : {
-            "type" : "array",
-            "items" : {
-              "$ref" : "Place"
-            }
-          },
-          "nextPageToken" : {
-            "type" : "string"
-          }
-        }
       }
     },
     "methods" : {
-      "com.codesdk.mobileassistant.PlaceEndpoint.getPlace" : {
-        "response" : {
-          "$ref" : "Place"
-        }
-      },
       "com.codesdk.mobileassistant.PlaceEndpoint.listPlace" : {
         "response" : {
           "$ref" : "CollectionResponse_Place"
+        }
+      },
+      "com.codesdk.mobileassistant.PlaceEndpoint.getPlace" : {
+        "response" : {
+          "$ref" : "Place"
         }
       },
       "com.codesdk.mobileassistant.PlaceEndpoint.updatePlace" : {

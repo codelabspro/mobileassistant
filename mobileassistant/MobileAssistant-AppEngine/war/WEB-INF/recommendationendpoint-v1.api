@@ -1,0 +1,229 @@
+{
+  "extends" : "thirdParty.api",
+  "abstract" : false,
+  "root" : "https://valid-dragon-662.appspot.com/_ah/api",
+  "name" : "recommendationendpoint",
+  "version" : "v1",
+  "defaultVersion" : false,
+  "adapter" : {
+    "bns" : "https://valid-dragon-662.appspot.com/_ah/spi",
+    "deadline" : 65.0,
+    "type" : "lily"
+  },
+  "auth" : {
+    "allowCookieAuth" : false
+  },
+  "frontendLimits" : {
+    "unregisteredUserQps" : -1,
+    "unregisteredQps" : -1,
+    "unregisteredDaily" : -1,
+    "rules" : [ ]
+  },
+  "cacheControl" : {
+    "type" : "no-cache",
+    "maxAge" : 0
+  },
+  "ownerDomain" : "codesdk.com",
+  "ownerName" : "codesdk.com",
+  "packagePath" : "mobileassistant",
+  "methods" : {
+    "recommendationendpoint.removeRecommendation" : {
+      "path" : "recommendation/{id}",
+      "httpMethod" : "DELETE",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.codesdk.mobileassistant.RecommendationEndpoint.removeRecommendation",
+      "request" : {
+        "parameters" : {
+          "id" : {
+            "type" : "int64",
+            "required" : true
+          }
+        },
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "empty"
+      }
+    },
+    "recommendationendpoint.listRecommendation" : {
+      "path" : "recommendation",
+      "httpMethod" : "GET",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.codesdk.mobileassistant.RecommendationEndpoint.listRecommendation",
+      "request" : {
+        "parameters" : {
+          "cursor" : {
+            "type" : "string",
+            "required" : false
+          },
+          "limit" : {
+            "type" : "int32",
+            "required" : false
+          }
+        },
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "recommendationendpoint.insertRecommendation" : {
+      "path" : "recommendation",
+      "httpMethod" : "POST",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.codesdk.mobileassistant.RecommendationEndpoint.insertRecommendation",
+      "request" : {
+        "body" : "autoTemplate(backendRequest)",
+        "bodyName" : "resource"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "recommendationendpoint.getRecommendation" : {
+      "path" : "recommendation/{id}",
+      "httpMethod" : "GET",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.codesdk.mobileassistant.RecommendationEndpoint.getRecommendation",
+      "request" : {
+        "parameters" : {
+          "id" : {
+            "type" : "int64",
+            "required" : true
+          }
+        },
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "recommendationendpoint.updateRecommendation" : {
+      "path" : "recommendation",
+      "httpMethod" : "PUT",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.codesdk.mobileassistant.RecommendationEndpoint.updateRecommendation",
+      "request" : {
+        "body" : "autoTemplate(backendRequest)",
+        "bodyName" : "resource"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    }
+  },
+  "descriptor" : {
+    "schemas" : {
+      "CollectionResponse_Recommendation" : {
+        "id" : "CollectionResponse_Recommendation",
+        "type" : "object",
+        "properties" : {
+          "items" : {
+            "type" : "array",
+            "items" : {
+              "$ref" : "Recommendation"
+            }
+          },
+          "nextPageToken" : {
+            "type" : "string"
+          }
+        }
+      },
+      "Recommendation" : {
+        "id" : "Recommendation",
+        "type" : "object",
+        "properties" : {
+          "key" : {
+            "$ref" : "Key"
+          },
+          "title" : {
+            "type" : "string"
+          },
+          "description" : {
+            "type" : "string"
+          },
+          "imageUrl" : {
+            "type" : "string"
+          },
+          "expiration" : {
+            "type" : "string",
+            "format" : "date-time"
+          }
+        }
+      },
+      "Key" : {
+        "id" : "Key",
+        "type" : "object",
+        "properties" : {
+          "kind" : {
+            "type" : "string"
+          },
+          "appId" : {
+            "type" : "string"
+          },
+          "id" : {
+            "type" : "string",
+            "format" : "int64"
+          },
+          "name" : {
+            "type" : "string"
+          },
+          "parent" : {
+            "$ref" : "Key"
+          },
+          "complete" : {
+            "type" : "boolean"
+          },
+          "namespace" : {
+            "type" : "string"
+          }
+        }
+      }
+    },
+    "methods" : {
+      "com.codesdk.mobileassistant.RecommendationEndpoint.removeRecommendation" : {
+      },
+      "com.codesdk.mobileassistant.RecommendationEndpoint.listRecommendation" : {
+        "response" : {
+          "$ref" : "CollectionResponse_Recommendation"
+        }
+      },
+      "com.codesdk.mobileassistant.RecommendationEndpoint.insertRecommendation" : {
+        "request" : {
+          "$ref" : "Recommendation"
+        },
+        "response" : {
+          "$ref" : "Recommendation"
+        }
+      },
+      "com.codesdk.mobileassistant.RecommendationEndpoint.getRecommendation" : {
+        "response" : {
+          "$ref" : "Recommendation"
+        }
+      },
+      "com.codesdk.mobileassistant.RecommendationEndpoint.updateRecommendation" : {
+        "request" : {
+          "$ref" : "Recommendation"
+        },
+        "response" : {
+          "$ref" : "Recommendation"
+        }
+      }
+    }
+  }
+}

@@ -1,6 +1,6 @@
 {
  "kind": "discovery#rpcDescription",
- "etag": "\"MKGA2miAJpVGF7yQTQhsoDXpye8/oPgKpbGGnovjEMK_4D6x0NkWvEU\"",
+ "etag": "\"MKGA2miAJpVGF7yQTQhsoDXpye8/TbkssSTTqTcFupHKnz3cyFuyCWE\"",
  "discoveryVersion": "v1",
  "id": "checkinendpoint:v1",
  "name": "checkinendpoint",
@@ -14,8 +14,8 @@
   "x32": "http://www.google.com/images/icons/product/search-32.gif"
  },
  "protocol": "rpc",
- "rootUrl": "https://myapp.appspot.com/_ah/api/",
- "rpcUrl": "https://myapp.appspot.com/_ah/api/rpc",
+ "rootUrl": "https://valid-dragon-662.appspot.com/_ah/api/",
+ "rpcUrl": "https://valid-dragon-662.appspot.com/_ah/api/rpc",
  "rpcPath": "/_ah/api/rpc",
  "parameters": {
   "alt": {

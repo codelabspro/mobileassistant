@@ -1,13 +1,13 @@
 {
   "files": [
     {
-      "downloadUrl": "/downloads/placeendpoint/v1/20140804181809/java/1.18.0-rc/codesdk.com-placeendpoint-v1-20140804181809-java-1.18.0-rc-sources.jar", 
-      "path": "codesdk.com-placeendpoint-v1-20140804181809-java-1.18.0-rc-sources.jar", 
+      "downloadUrl": "/downloads/placeendpoint/v1/20140805050509/java/1.18.0-rc/codesdk.com-placeendpoint-v1-20140805050509-java-1.18.0-rc-sources.jar", 
+      "path": "codesdk.com-placeendpoint-v1-20140805050509-java-1.18.0-rc-sources.jar", 
       "type": "source", 
-      "timestamp": "2014-08-04 18:18"
+      "timestamp": "2014-08-05 05:05"
     }, 
     {
-      "path": "codesdk.com-placeendpoint-v1-20140804181809-java-1.18.0-rc.jar.properties", 
+      "path": "codesdk.com-placeendpoint-v1-20140805050509-java-1.18.0-rc.jar.properties", 
       "type": "android.properties"
     }
   ], 
@@ -675,5 +675,5 @@
   "packagePath": "mobileassistant", 
   "language_version": "1.18.0-rc", 
   "id": "placeendpoint:v1", 
-  "revision": 20140804181809
+  "revision": 20140805050509
 }
